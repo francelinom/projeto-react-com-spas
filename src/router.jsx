@@ -4,6 +4,7 @@ import Cart from "./pages/Cart.jsx";
 import Products from "./pages/Products.jsx";
 import AdminHome from "./pages/admin/AdminHome.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
+import Product from "./pages/Product.jsx";
 
 const router = createBrowserRouter([
     {
@@ -15,11 +16,15 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: "/products",
+                path: "products",
                 element: <Products/>
             },
             {
-                path: "/cart",
+                path: "products/:productId",
+                element: <Product />
+            },
+            {
+                path: "cart",
                 element: <Cart/>
             },
         ]
